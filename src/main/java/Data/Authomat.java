@@ -1,6 +1,12 @@
 package Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Authomat implements IAuthomat {
+
+    List<HotDrinks> hotDrinks = new ArrayList<>();
+    List<HotDrinks> list = new ArrayList<>();
     private String vid;
     private String productType;
     private String name;
@@ -9,6 +15,8 @@ public class Authomat implements IAuthomat {
         this.vid = vid;
         this.productType = productType;
         this.name = name;
+    }
+    public Authomat(){
     }
 
     public String getProductType() {
@@ -37,20 +45,43 @@ public class Authomat implements IAuthomat {
 
     @Override
     public String toString() {
-        return "Authomat{" +
-                "vid='" + vid + '\'' +
-                ", productType='" + productType + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return " Authomat: " +
+                " Vid: " + vid + '\'' +
+                " ProductType: " + productType + '\'' +
+                " Name: " + name + '\'' +
+                ' ';
     }
+
 
     @Override
     public void initProduct() {
-
     }
-
+    public void initProduct(List<HotDrinks> list) {
+        this.hotDrinks = list;
+    }
     @Override
     public String getProduct() {
         return null;
+    }
+    public String getProduct(String name) {
+        list.clear();
+        for (HotDrinks el : hotDrinks) {
+            if (el.getName().equals(name)) list.add(el);
+        }
+        return list.toString();
+    }
+    public String getProduct(int temp) {
+        list.clear();
+        for (HotDrinks el : hotDrinks) {
+            if (el.getTemp() <= temp) list.add(el);
+        }
+        return list.toString();
+    }
+    public String getProductPrice(int Price) {
+        list.clear();
+        for (HotDrinks el : hotDrinks) {
+            if (el.getPrice() <= Price) list.add(el);
+        }
+        return list.toString();
     }
 }

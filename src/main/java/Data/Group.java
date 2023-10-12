@@ -44,11 +44,11 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
-                "studentsList=" + drinksList +
-                ",\nteacher=" + authomat +
-                ", id group=" + id +
-                '}';
+        return "\nGroup: " +
+                "DrinkList: " + drinksList +
+                "\nAuthomat: " + authomat +
+                "Id Group: " + id +
+                '\n';
     }
 
     public Authomat getAuthomat() {

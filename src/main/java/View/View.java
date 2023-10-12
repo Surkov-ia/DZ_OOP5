@@ -16,6 +16,12 @@ public class View {
     public void printInfo(){
         System.out.println(controller);
     }
+    @Override
+    public String toString() {
+        return "View: " +
+                controller +
+                ' ';
+    }
 }
 
 

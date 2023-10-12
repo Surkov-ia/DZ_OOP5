@@ -29,12 +29,11 @@ public class HotDrinks extends Product {
 
     @Override
     public String toString() {
-        return "\nHotDrinks{" +
-                "temp=" + temp +
-                ", id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", volume=" + volume +
-                '}';
+        return "\nHotDrinks: " +
+                " Name: " + name +
+                " Volume: " + volume +
+                " Price: " + price +
+                " Temp: " + temp +
+                ' ';
     }
 }

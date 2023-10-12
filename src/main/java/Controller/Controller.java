@@ -12,7 +12,7 @@ public class Controller {
 
     @Override
     public String toString() {
-        return "Controller{}" + stream;
+        return "Controller: " + stream;
     }
 
     public void addGroup(Group group) {
